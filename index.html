@@ -1,0 +1,44 @@
+<HTML>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/themes/smoothness/jquery-ui.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
+
+		<style>
+			#logo{
+				margin: auto;
+				position: fixed;
+			}
+
+			#storeFront{
+				position: absolute;
+				z-index: -1;
+				width: 90%;
+				border: none;
+				padding-top: 60px;
+				margin: auto;
+				float: left;
+			}
+
+		</style>
+
+		<script>
+			$(function(){
+				var $iframe = $("storeFront").contents();
+				$("storeFront").ready(function(){
+					
+
+					$("storeFront").remove("table:first");
+
+
+
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+		<img src="img/logoMain.png" height="50" id="logo">
+		<iframe src="catalog958117212.html" height="500" id="storeFront">
+	</body>
+</HTML>
