@@ -1,0 +1,49 @@
+<HTML>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/themes/smoothness/jquery-ui.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
+
+		<style>
+			#logo{
+				margin: auto;
+				position: fixed;
+			}
+
+			#storeFront{
+				position: absolute;
+				width: 90%;
+				border: none;
+				padding-top: 60px;
+				margin: auto;
+				float: left;
+			}
+
+		</style>
+
+		<script>
+			$(function(){
+				$.get("/catalog958117212.html", function(data){
+					$("#storeFront").html(data);
+					fixTheStupidSite();
+				});
+				
+				$("a:contains('Start Order')").
+
+			});
+
+			function fixTheStupidSite(){
+				$("#storeFront").find("table:first").remove();
+			}
+			
+		</script>
+	</head>
+
+	<body>
+		<img src="img/logoMain.png" height="50" id="logo">
+
+		<div id="storeFront">
+
+		</div>
+	</body>
+</HTML>

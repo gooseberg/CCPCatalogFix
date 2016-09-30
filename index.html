@@ -4,6 +4,9 @@
 		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/themes/smoothness/jquery-ui.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
 
+		<title>Rabobank Storefront</title>
+		<link rel=icon href=favicon.png sizes="16x16 32x32 48x48 64x64x 128x128" type="image/png">
+
 		<style>
 			#logo{
 				margin: auto;
@@ -12,7 +15,6 @@
 
 			#storeFront{
 				position: absolute;
-				z-index: -1;
 				width: 90%;
 				border: none;
 				padding-top: 60px;
@@ -24,21 +26,38 @@
 
 		<script>
 			$(function(){
-				var $iframe = $("storeFront").contents();
-				$("storeFront").ready(function(){
-					
-
-					$("storeFront").remove("table:first");
-
-
-
+				$("#storeFront").on("load",function(){
+					var $storeFront = $("#storeFront").contents();
+					fixTheStupidSite($storeFront);
 				});
 			});
+
+			function fixTheStupidSite($document){
+				var iFrameTitle = $document.find("title").text();
+				console.log("iFrame Loaded");
+				console.log(iFrameTitle);
+				$document.find("table:first").remove();
+
+				switch(iFrameTitle){
+					case "New Page 1":
+						$document.find(".blueLink").attr("target", "_self");
+						break;
+
+					case "Rabobank Guest":
+				}
+
+
+
+			}
+			
 		</script>
 	</head>
 
 	<body>
 		<img src="img/logoMain.png" height="50" id="logo">
-		<iframe src="catalog958117212.html" height="500" id="storeFront">
+
+		<iframe src="/catalog958117212.html" id="storeFront" height="500">
+
+		</div>
 	</body>
 </HTML>
