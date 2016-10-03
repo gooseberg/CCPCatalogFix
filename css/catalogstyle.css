@@ -2,7 +2,7 @@
 body{
 font-family: 'Open Sans', sans-serif;
 font-weight: 300;
-color: black;
+color: white;
 }
 h1 {
 	font-weight: 300;
@@ -37,5 +37,9 @@ input:focus{
 	width: 100%;
 }
 .catalog-img{
+	background-color: black;
+}
+
+.black-background{
 	background-color: black;
 }
